@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\TenantScope;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,7 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Global tenant scope — add this to any model that needs organization isolation
-        // \Illuminate\Database\Eloquent\Model::addGlobalScope(new TenantScope);
+        //
     }
 }
