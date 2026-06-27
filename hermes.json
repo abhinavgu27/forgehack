@@ -1,0 +1,16 @@
+{
+    "provider": "eastrouter",
+    "base_url": "https://api.eastrouter.com/v1",
+    "api_key": "${sk-er_f336e76a_4b45eed0d06257f09c9b50d8279f30ad2adff16e1f30437e}",
+    "model": "deepseek/deepseek-v4-pro",
+    "memory": true,
+    "slack": {
+        "app_token": "${xapp-1-A0BC51BHH3P-11410120967395-3776332e6307a5a2f09030834137ddcd2586afdbb9e6716dc80a663354e06e71}",
+        "bot_token": "${xoxb-11416422014210-11410110735379-AZBih8RcWgQHi0fGqNLZ5SwO}",
+        "channels": [
+            "sprint-main",
+            "agent-coder",
+            "human-review"
+        ]
+    }
+}

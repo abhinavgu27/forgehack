@@ -1,12 +1,27 @@
 {
-  "_comment": "OpenClaw (coder) -- EastRouter config. Secrets REDACTED on purpose.",
-  "model": { "base_url": "https://api.eastrouter.com/v1", "api_key": "${EASTROUTER_API_KEY}", "model": "z-ai/glm-5.1" },
-  "channels": {
+    "model": {
+        "base_url": "https://api.eastrouter.com/api/anthropic",
+        "api_key": "${sk-er_f336e76a_4b45eed0d06257f09c9b50d8279f30ad2adff16e1f30437e}",
+        "model_id": "z-ai/glm-5.1"
+    },
     "slack": {
-      "enabled": true,
-      "appToken": { "source": "env", "id": "SLACK_APP_TOKEN" },
-      "botToken": { "source": "env", "id": "SLACK_BOT_TOKEN" },
-      "channels": ["#agent-coder", "#agent-log", "#ci-cd"]
-    }
-  }
+        "app_token": "${xapp-1-A0BC51BHH3P-11410120967395-3776332e6307a5a2f09030834137ddcd2586afdbb9e6716dc80a663354e06e71}",
+        "bot_token": "${xoxb-11416422014210-11410110735379-AZBih8RcWgQHi0fGqNLZ5SwO}",
+        "channels": [
+            "agent-coder",
+            "agent-log",
+            "ci-cd"
+        ]
+    },
+    "workspace": {
+        "command_execution": true,
+        "working_directory": "C:\\Users\\abhin\\Downloads\\forge2_abhinav\\backend",
+        "allowed_commands": [
+            "php",
+            "composer",
+            "npm",
+            "git"
+        ]
+    },
+    "system_prompt": "You are OpenClaw, the Coder AI. Your job is to implement features assigned by Hermes. Write clean Laravel + React code. Run tests. Open PRs. Report in #agent-log with: What I Did / What's Left / What Needs Your Call."
 }

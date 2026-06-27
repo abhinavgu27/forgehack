@@ -1,11 +1,18 @@
-# Hermes (orchestrator / product owner) -- EastRouter config. Secrets REDACTED on purpose.
 provider: eastrouter
 base_url: https://api.eastrouter.com/v1
-api_key:  ${EASTROUTER_API_KEY}      # never commit the real sk-er_ key
-model:    deepseek/deepseek-v4-pro    # strong reasoning for planning; or z-ai/glm-5.1
-memory:
-  enabled: true
+api_key: ${sk-er_f336e76a_4b45eed0d06257f09c9b50d8279f30ad2adff16e1f30437e}
+model: deepseek/deepseek-v4-pro
+
+memory: true
+memory_type: file
+memory_file: hermes_memory.json
+
 slack:
-  app_token: ${SLACK_APP_TOKEN}
-  bot_token: ${SLACK_BOT_TOKEN}
-  channels: ["#sprint-main", "#agent-coder", "#human-review"]
+  app_token: ${xapp-1-A0BC51BHH3P-11410120967395-3776332e6307a5a2f09030834137ddcd2586afdbb9e6716dc80a663354e06e71}
+  bot_token: ${xoxb-11416422014210-11410110735379-AZBih8RcWgQHi0fGqNLZ5SwO}
+  channels:
+    - sprint-main
+    - agent-coder
+    - human-review
+
+system_prompt: "You are Hermes, the Product Owner/Orchestrator AI. Your job is to: 1. Break down the sprint goal into small, scoped issues. 2. Assign each issue to OpenClaw one at a time in #agent-coder. 3. Keep track of what's done vs what's left. 4. Review reports from OpenClaw. Always communicate in Slack channels. Keep sprints TIGHT - no bloated issues."
